@@ -8,10 +8,10 @@ def test_migracion():
     main()
 
     if not os.path.exists("data/output/results.tsv"):
-        raise FileNotFoundError("El archivo results.tsv no existe.")
+        raise FileNotFoundError("El archivo wordcount.tsv no existe.")
 
     results = {}
-    with open("data/output/results.tsv", "r", encoding="utf-8") as f:
+    with open("data/output/wordcount.tsv", "r", encoding="utf-8") as f:
         lines = f.readlines()
     for line in lines:
         key, value = line.strip().split("\t")
